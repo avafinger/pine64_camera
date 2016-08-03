@@ -38,7 +38,9 @@ Now you should have /dev/video0:
 ls /dev/video0 
 
 
-Now use the Guvcview to see your camera working
-===============================================
+Now use the modified Guvcview to see your camera working
+========================================================
 
 guvcview -d /dev/video0 -x 640x480 -r sdl -f yu12
+
+You need to compile Guvcview in order to use your camera, or try motion.
