@@ -1,5 +1,5 @@
-Instructions for the Pine64+ Camera Module
-******************************************
+Instructions for the Banana PI M64 / Pine64+ Camera Module
+***********************************************************
 
 Basic instructions to activate and use the Pine64+ Camera module.
 
@@ -38,9 +38,21 @@ Now you should have /dev/video0:
 ls /dev/video0 
 
 
+**** This is a WIP - use at your own risk ****
+
 Now use the modified Guvcview to see your camera working
 ========================================================
 
+You need to compile Guvcview in order to use your camera, or install the deb packages or try motion.
+
+Install the deb packages in Ubuntu Xenial 16.04
+Run:
+sudo dpkg -i *.deb
+
+Run:
 guvcview -d /dev/video0 -x 640x480 -r sdl -f yu12
 
-You need to compile Guvcview in order to use your camera, or try motion.
+
+
+
+
