@@ -1,5 +1,5 @@
-Instructions for the Pine64+ Camera Module
-******************************************
+Instructions for the Banana PI M64 / Pine64+ Camera Module
+***********************************************************
 
 Basic instructions to activate and use the Pine64+ Camera module.
 
