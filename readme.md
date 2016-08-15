@@ -27,18 +27,22 @@ Run in the command line:
 
 sudo /sbin/modprobe -r -f vfe_v4l2
 
-sleep 1
-
 sudo /sbin/modprobe s5k4ec 
 
 sudo /sbin/modprobe vfe_v4l2
+
 
 Now you should have /dev/video0:
 
 ls /dev/video0 
 
+Or edit /etc/modules and add the two lines and reboot:
 
-**** This is a WIP - use at your own risk ****
+s5k4ec 
+
+vfe_v4l2
+
+**** This is a WiP - use at your own risk ****
 
 Now use the modified Guvcview to see your camera working
 ========================================================
@@ -46,11 +50,14 @@ Now use the modified Guvcview to see your camera working
 You need to compile Guvcview in order to use your camera, or install the deb packages or try motion.
 
 Install the deb packages in Ubuntu Xenial 16.04
+
 Run:
+
 sudo dpkg -i *.deb
 
 Run:
-guvcview -d /dev/video0 -x 640x480 -r sdl -f yu12
+
+guvcview -d /dev/video0 -x 640x480 -r sdl -f nv12
 
 
 
