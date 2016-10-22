@@ -48,8 +48,6 @@ Or edit /etc/modules and add the two lines and reboot:
 Now use the modified Guvcview to see your camera working
 ========================================================
 
-You need to compile Guvcview in order to use your camera.
-
 Install dependencies:
 
 	sudo apt-get install libmp3lame-dev libx264-dev libpulse-dev libv4l-dev libsdl1.2-dev libgtk-3-dev portaudio19-dev libpng12-dev libavcodec-dev libavutil-dev libudev-dev libusb-1.0-0-dev libpulse-dev libgsl0-dev libv4l2rds0
