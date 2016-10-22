@@ -48,14 +48,14 @@ Or edit /etc/modules and add the two lines and reboot:
 Now use the modified Guvcview to see your camera working
 ========================================================
 
-Install dependencies:
+Install dependencies from command line:
 
 	sudo apt-get install libmp3lame-dev libx264-dev libpulse-dev libv4l-dev libsdl1.2-dev libgtk-3-dev portaudio19-dev libpng12-dev libavcodec-dev libavutil-dev libudev-dev libusb-1.0-0-dev libpulse-dev libgsl0-dev libv4l2rds0
 
 
 Install the deb packages in Ubuntu Xenial 16.04 (Desktop)
 
-Run:
+Run from command line:
 
 	sudo dpkg -i libguvcview-1.1-1_2.0.2+debian-3_arm64.deb 
 	sudo dpkg -i guvcview_2.0.2+debian-3_arm64.deb
@@ -67,6 +67,7 @@ Run:
 
 or
 
+	guvcview -d /dev/video0 -x 640x480 -r sdl -f yu12
 	guvcview -d /dev/video0 -x 640x480 -r sdl -f nv12
 
 
