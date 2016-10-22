@@ -1,5 +1,5 @@
-Instructions for the Banana PI M64 / Pine64+ Camera Module
-***********************************************************
+Instructions for Pine64+ Camera Module
+**************************************
 
 Basic instructions to activate and use the Pine64+ Camera module.
 
@@ -75,7 +75,7 @@ History
 -------
 
 * Initial commit
-* Fix for Gtk3 Gui to start correctly on any win size, you are know able to switch Resolutions
+* Fix for Gtk3 Gui to start correctly on any win size, you are now able to switch Resolutions
 * additional instructions and updated deb
 
 
