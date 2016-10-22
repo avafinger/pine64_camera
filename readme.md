@@ -6,12 +6,11 @@ Basic instructions to activate and use the Pine64+ Camera module.
 git clone https://github.com/avafinger/pine64_camera
 
 Known issues:
- - Some Artifacts on streaming
  - Controls not working yet
-
+ - HW encoding not used, no video saving
 
 Requires:
- - kernel 3.10.102 (or latest) - Debian / Ubuntu
+ - kernel 3.10.102 (or latest) - Debian / Ubuntu (Desktop)
  - camera module s5k4ec
  - DTB with s5k4ec enabled
 
@@ -44,22 +43,40 @@ vfe_v4l2
 
 **** This is a WiP - use at your own risk ****
 
+
 Now use the modified Guvcview to see your camera working
 ========================================================
 
-You need to compile Guvcview in order to use your camera, or install the deb packages or try motion.
+You need to compile Guvcview in order to use your camera.
 
-Install the deb packages in Ubuntu Xenial 16.04
+Install dependencies:
+
+	sudo apt-get install libmp3lame-dev libx264-dev libpulse-dev libv4l-dev libsdl1.2-dev libgtk-3-dev portaudio19-dev libpng12-dev libavcodec-dev libavutil-dev libudev-dev libusb-1.0-0-dev libpulse-dev libgsl0-dev libv4l2rds0
+
+
+Install the deb packages in Ubuntu Xenial 16.04 (Desktop)
 
 Run:
 
-sudo dpkg -i *.deb
+	sudo dpkg -i libguvcview-1.1-1_2.0.2+debian-3_arm64.deb 
+	sudo dpkg -i guvcview_2.0.2+debian-3_arm64.deb
+
 
 Run:
 
-guvcview -d /dev/video0 -x 640x480 -r sdl -f nv12
+	guvcview (from command line) or use the menu
+
+or
+
+	guvcview -d /dev/video0 -x 640x480 -r sdl -f nv12
 
 
+History
+-------
+
+* Initial commit
+* Fix for Gtk3 Gui to start correctly on any win size, you are know able to switch Resolutions
+* additional instructions and updated deb
 
 
 
