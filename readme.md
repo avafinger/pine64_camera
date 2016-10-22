@@ -24,22 +24,23 @@ Final steps
 ===========
 Run in the command line:
 
-sudo /sbin/modprobe -r -f vfe_v4l2
+	sudo /sbin/modprobe -r -f vfe_v4l2
+	sudo /sbin/modprobe -r -f s5k4ec 
 
-sudo /sbin/modprobe s5k4ec 
+Now load the new driver after you update it:
 
-sudo /sbin/modprobe vfe_v4l2
+	sudo /sbin/modprobe s5k4ec 
+	sudo /sbin/modprobe vfe_v4l2
 
 
 Now you should have /dev/video0:
 
-ls /dev/video0 
+	ls /dev/video0 
 
 Or edit /etc/modules and add the two lines and reboot:
 
-s5k4ec 
-
-vfe_v4l2
+	s5k4ec 
+	vfe_v4l2
 
 **** This is a WiP - use at your own risk ****
 
